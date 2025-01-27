@@ -1,8 +1,8 @@
-import Discover from './Discover/Discover.tsx';
-import HelpCenter from './HelpCenter/HelpCenter.tsx';
+import Discover from './Discover/Discover';
+import HelpCenter from './HelpCenter/HelpCenter';
 import Profile from './Profile/Profile.tsx';
-import Notification from './Notification/Notification.tsx';
-import SideBar from './SideBar/SideBar.tsx';
+import Notification from './Notification/Notification';
+import SideBar from './SideBar/SideBar';
 
 
 export { Discover, HelpCenter, Profile, Notification, SideBar }
