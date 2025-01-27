@@ -14,51 +14,54 @@ import images from "../../img";
 
 const NavBar = () => {
     //----USESTATE COMPONENTS
-    const [discover, setDiscover] = useState(false);
-    const [help, setHelp] = useState(false);
-    const [notification, setNotification] = useState(false);
-    const [profile, setProfile] = useState(false);
+    const [menuState, setMenuState] = useState({
+        discover: false,
+        help: false,
+        notification: false,
+        profile: false,
+    });
     const [openSideMenu, setOpenSideMenu] = useState(false);
 
     const openMenu = (e: React.MouseEvent<HTMLParagraphElement, MouseEvent>) => {
-        const btnText = (e.target as HTMLElement).innerText;
-        if (btnText === "Discover") {
-            setDiscover(true);
-            setHelp(false);
-            setNotification(false);
-            setProfile(false);
-        } else if (btnText === "Help Center") {
-            setDiscover(false);
-            setHelp(true);
-            setNotification(false);
-            setProfile(false);
-        } else {
-            setDiscover(false);
-            setHelp(false);
-            setNotification(false);
-            setProfile(false);
-        }
+        const menu:string = (e.target as HTMLElement).innerText;
+
+        setMenuState(() => ({
+          discover: menu === "Discover",
+          help: menu === "Help Center",
+          notification: false,
+          profile: false,
+        }));
     }
 
     const openNotification = () => {
-        if (!notification) {
-            setNotification(true);
-            setDiscover(false);
-            setHelp(false);
-            setProfile(false);
+        if (!(menuState.notification)) {
+            setMenuState(() => ({
+                discover: false,
+                help: false,
+                notification: true,
+                profile: false
+            }))
         } else {
-            setNotification(false);
+            setMenuState((prevState) => ({
+                ...prevState, // 기존 상태 복사
+                notification: false,
+            }));
         }
     }
 
     const openProfile = () => {
-        if (!profile) {
-            setNotification(false);
-            setDiscover(false);
-            setHelp(false);
-            setProfile(true);
+        if (!(menuState.profile)) {
+            setMenuState(() => ({
+                discover: false,
+                help: false,
+                notification: false,
+                profile: true
+            }))
         } else {
-            setProfile(false);
+            setMenuState((prevState) => ({
+                ...prevState, // 기존 상태 복사
+                profile: false,
+            }));
         }
     }
 
@@ -90,7 +93,7 @@ const NavBar = () => {
                 {/* DISCOVER MENU */}
                 <div className={Style.navbar_container_right_discover}>
                     <p onClick={(e) => { openMenu(e) }}>Discover</p>
-                    {discover && (
+                    {menuState.discover && (
                         <div className={Style.navbar_container_right_discover_box}>
                             <Discover />
                         </div>
@@ -100,7 +103,7 @@ const NavBar = () => {
                 {/* HELP CENTER MENU */}
                 <div className={Style.navbar_container_right_help}>
                     <p onClick={(e) => { openMenu(e) }}>Help Center</p>
-                    {help && (
+                    {menuState.help && (
                         <div className={Style.navbar_container_right_discover_box}>
                             <HelpCenter />
                         </div>
@@ -110,7 +113,7 @@ const NavBar = () => {
                 {/* NOTIFICATION */}
                 <div className={Style.navbar_container_right_notify}>
                     <MdNotifications className={Style.notify} onClick={() => openNotification()} />
-                    {notification && <Notification />}
+                    {menuState.notification && <Notification />}
                 </div>
 
                 {/* CREATE BUTTON SECTION */}
@@ -122,7 +125,7 @@ const NavBar = () => {
                 <div className={Style.navbar_container_right_profile_box}>
                     <div className={Style.navbar_container_right_profile}>
                         <Img src={images.user1} alt="Profile" width={40} onClick={() => openProfile()} />
-                        {profile && <Profile />}
+                        {menuState.profile && <Profile />}
                     </div>
                 </div>
 
