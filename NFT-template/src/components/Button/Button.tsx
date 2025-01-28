@@ -1,8 +1,17 @@
+//INTERNAL IMPORT
 import Style from './Button.module.css'
 
-const Button = () => {
+interface ButtonProps {
+    btnName: string;
+    handleClick: void;
+}
+const Button = ({ btnName, handleClick }: ButtonProps) => {
     return (
-        <div>Button</div>
+        <div className={Style.box}>
+            <button className={Style.button} onClick={() => handleClick}>
+                {btnName}
+            </button>
+        </div>
     )
 }
 

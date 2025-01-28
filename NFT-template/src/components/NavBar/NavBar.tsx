@@ -118,15 +118,13 @@ const NavBar = () => {
 
                     {/* CREATE BUTTON SECTION */}
                     <div className={Style.navbar_container_right_button}>
-                        <Button btnText="Create" />
+                        <Button btnName="Create" handleClick={() => { }} />
                     </div>
 
                     {/* USER PROFILE */}
-                    <div className={Style.navbar_container_right_profile_box}>
-                        <div className={Style.navbar_container_right_profile}>
-                            <Img src={images.user1} alt="Profile" width={40} onClick={() => openProfile()} />
-                            {menuState.profile && <Profile />}
-                        </div>
+                    <div className={Style.navbar_container_right_profile}>
+                        <Img src={images.user1} alt="Profile" width={40} onClick={() => openProfile()} />
+                        {menuState.profile && <Profile />}
                     </div>
 
                     {/* MENU BUTTON */}
@@ -138,7 +136,7 @@ const NavBar = () => {
 
             {/* SIDEBAR COMPONENT */}
             {openSideMenu && (
-                <div className={Style.SideBar}>
+                <div className={Style.sideBar}>
                     <SideBar setOpenSideMenu={setOpenSideMenu} />
                 </div>
             )}
