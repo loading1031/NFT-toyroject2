@@ -90,6 +90,10 @@
     cursor: pointer;
 }
 
+.navbar_container_right_profile{
+    position: relative;
+}
+
 .navbar_container_right_profile Img{
     border-radius: 50%;
 }
