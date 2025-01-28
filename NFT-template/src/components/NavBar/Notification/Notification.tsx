@@ -7,7 +7,7 @@ import images from '../../../img'
 
 const Notification = () => {
     return (
-        <div className={Style.Notification}>
+        <div className={Style.notification}>
             <p>Notification</p>
             <div className={Style.notification_box}>
                 <div className={Style.notification_box_img}>
