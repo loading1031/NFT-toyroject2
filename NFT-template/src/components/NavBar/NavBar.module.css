@@ -111,13 +111,13 @@
 
 .sideBar{
     position: fixed;
+    right: 0;
     top: 0;
     width: 24rem;
     background-color: var(--main-bg-color);
     box-shadow: var(--box-shadow);
     height: 100vh;
     overflow-y: auto;
-    display: none;
     z-index: 11111;
 }
 
@@ -149,9 +149,6 @@
         display: none;
     }
     .navbar_container_right_button{
-        display: none;
-    }
-    .sideBar{
         display: none;
     }
 
