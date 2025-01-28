@@ -50,7 +50,7 @@
     grid-template-columns: 1fr 1fr .5fr 1fr .3fr;
     gap: 1rem;
     align-items: center;
-    align-self: flex-end;
+    /* align-self: flex-end; 수평을 맞추기 위해 주석처리 */
 }
 
 .navbar_container_right_discover{
@@ -66,6 +66,7 @@
 .navbar_container_right_discover_box,
 .navbar_container_right_help_box{
     position: absolute;
+    text-align: left;
     padding: 1rem .5rem;
     box-shadow: var(--box-shadow);
     font-size: 1rem;
