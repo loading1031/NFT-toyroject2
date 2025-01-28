@@ -137,7 +137,7 @@ const SideBar = ({ setOpenSideMenu }: SideBarProps) => {
                         <TiArrowSortedDown />
                     </div>
                     {openDiscover && (
-                        <div className={Style.sideBar_discover}>
+                        <div className={Style.sideBar_menu_list}>
                             {discover.map((el, i) => (
                                 <p key={i + 1}>
                                     <Link to={`/${el.link}`}>{el.name}</Link>
@@ -153,7 +153,7 @@ const SideBar = ({ setOpenSideMenu }: SideBarProps) => {
                             <p>Help Center</p>
                             <TiArrowSortedDown />
                         </div>
-                        {openHelp && <div className={Style.sideBar_discover}>
+                        {openHelp && <div className={Style.sideBar_menu_list}>
                             {helpCenter.map((el, i) => (
                                 <p key={i + 1}>
                                     <Link to={`/${el.link}`}>{el.name}</Link>

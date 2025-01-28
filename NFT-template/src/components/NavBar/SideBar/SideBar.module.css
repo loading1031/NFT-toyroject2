@@ -59,8 +59,9 @@
   cursor: pointer;
 }
 
-.sideBar_discover {
+.sideBar_menu_list {
   padding-inline: 1rem;
+  text-align: left;
 }
 
 .sideBar_button {
