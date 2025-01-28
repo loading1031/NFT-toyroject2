@@ -46,13 +46,13 @@ const Profile = () => {
                 </div>
 
                 <div className={Style.profie_menu_two}>
-                    <div className={Style.profie_menu_one_item}>
+                    <div className={Style.profile_menu_one_item}>
                         <MdHelpCenter />
                         <p>
                             <Link to={'/help'}>Help</Link>
                         </p>
                     </div>
-                    <div className={Style.profie_menu_one_item}>
+                    <div className={Style.profile_menu_one_item}>
                         <TbDownload />
                         <p>
                             <Link to={'/disconnect'}>Disconnect</Link>
