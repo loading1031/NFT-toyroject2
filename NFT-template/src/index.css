@@ -7,14 +7,22 @@
   --shadow-dark-color: #d3dae7;
   --shadow-light-color: #fff;
   --main-bg-color: #ecf0f3;
-
-  --box-shadow: 1rem 1rem 1rem var(var(--shadow-dark-color), -1rem -1rem 1rem var(var(--shadow-dark-color)));
-  --box-shadow-2: 0rem 0rem 0rem var(--shadow-dark-color), -.3rem -.3rem 1rem var(var(var(--shadow-dark-color)));
-
-
+  --box-shadow: 1rem 1rem 1rem var(--shadow-dark-color), -1rem -1rem 1rem var(--shadow-light-color);
+  --box-shadow-2: 0rem 0rem 0rem var(--shadow-dark-color), -.3rem -.3rem 1rem var(--shadow-dark-color);
+  
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  background-color: var(--main-bg-color);
+  color: var(--icons-color);
 }
 
 * {
