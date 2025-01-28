@@ -1,12 +1,16 @@
 import './App.css'
 
 //INTERNAL IMPORT
-import { NavBar } from "../components/components-index"
+import { Footer, NavBar } from "../components/components-index"
 
 function App() {
 
   return (
-    <NavBar />
+    <div>
+      <NavBar />
+      <Footer />
+    </div>
+
   )
 }
 
