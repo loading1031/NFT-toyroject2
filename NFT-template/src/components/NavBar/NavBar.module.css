@@ -109,6 +109,13 @@
 
 /* ////----SIDEBAR */
 
+.no-scroll {
+    overflow: hidden;
+    height: 100vh;
+    position: fixed; /* 💡 스크롤 방지를 확실히 적용 */
+    width: 100%;
+}
+
 .sideBar{
     position: fixed;
     right: 0;
