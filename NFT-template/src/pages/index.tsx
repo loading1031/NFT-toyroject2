@@ -1,6 +1,6 @@
 //INTERNAL IMPORT
 import Style from '../styles/index.module.css'
-import { HeroSection, Service, BigNFTSlider, Subscribe } from '../components/components-index'
+import { HeroSection, Service, BigNFTSlider, Subscribe, Title } from '../components/components-index'
 
 const Home = () => {
     return (
@@ -8,7 +8,11 @@ const Home = () => {
             <HeroSection />
             <Service />
             <BigNFTSlider />
-            <Subscribe />
+            <Title 
+                heading="Browse by category"
+                paragraph='Explore the NFTs in the most featured categories'
+            />
+            <Subscribe />        
         </div>
     )
 }
