@@ -1,5 +1,6 @@
 import BigNFTSlider from './BigNFTSlider/BigNFTSlider';
 import Button from './Button/Button';
+import Category from './Category/Category';
 import Footer from './Footer/Footer';
 import HeroSection from './HeroSection/HeroSection';
 import NavBar from './NavBar/NavBar';
@@ -15,5 +16,6 @@ export {
     Service,
     BigNFTSlider,
     Subscribe,
-    Title
+    Title,
+    Category
 }
