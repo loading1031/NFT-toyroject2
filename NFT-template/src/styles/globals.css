@@ -26,7 +26,7 @@ body {
 }
 
 * {
-  -webkit-tap-highlight-color: non;
+  -webkit-tap-highlight-color: none;
 }
 
 ::selection{
