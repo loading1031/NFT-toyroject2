@@ -1,12 +1,13 @@
 //INTERNAL IMPORT
 import Style from '../styles/index.module.css'
-import { HeroSection, Service } from '../components/components-index'
+import { HeroSection, Service, BigNFTSlider } from '../components/components-index'
 
 const Home = () => {
     return (
         <div className={Style.homePage}>
             <HeroSection />
             <Service />
+            <BigNFTSlider />
         </div>
     )
 }
