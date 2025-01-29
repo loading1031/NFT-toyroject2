@@ -1,6 +1,6 @@
 //INTERNAL IMPORT
 import Style from '../styles/index.module.css'
-import { HeroSection, Service, BigNFTSlider } from '../components/components-index'
+import { HeroSection, Service, BigNFTSlider, Subscribe } from '../components/components-index'
 
 const Home = () => {
     return (
@@ -8,6 +8,7 @@ const Home = () => {
             <HeroSection />
             <Service />
             <BigNFTSlider />
+            <Subscribe />
         </div>
     )
 }
