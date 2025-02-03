@@ -21,6 +21,7 @@ const NavBar = () => {
         profile: false,
     });
     const [openSideMenu, setOpenSideMenu] = useState(false);
+    //TODO: 사이드메뉴 열리면, 뒤쪽 페이지 슬라이드 안되게 설정
 
     const openMenu = (e: React.MouseEvent<HTMLParagraphElement, MouseEvent>) => {
         const menu: string = (e.target as HTMLElement).innerText;
